@@ -1,0 +1,7 @@
+#!/bin/bash
+kill -9 $(ps -A | grep python)
+rm -rf graph*
+rm -rf model*
+rm -rf event*
+rm -rf checkpoint*
+ps -A | grep python

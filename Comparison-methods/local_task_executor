@@ -1,0 +1,12 @@
+#!/bin/bash
+
+cd /home/ubuntu/TF-scheduler
+if [ ! -d "/home/ubuntu/TF-scheduler/"$4 ]
+then
+	mkdir /home/ubuntu/TF-scheduler/$4
+	cd /home/ubuntu/TF-scheduler/$4
+	cp ../{task.py,cluster.py,completion_task.py,computation.py,evaluator.py,RLmodel.py,scheduler.py,server.py,statistics.py,task_executor.py,train_RL_model.py,workload.py} ./
+fi
+cd /home/ubuntu/TF-scheduler/$4
+
+python ./task.py --ps_hosts=$1 --worker_hosts=$2 --job_name=$3 --task_index=0 --train_folder=/home/ubuntu/TF-scheduler/$4 --job $4 --task $5 &>$4_log_task$5

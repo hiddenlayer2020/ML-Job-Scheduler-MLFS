@@ -1,0 +1,5 @@
+#!/bin/bash
+python trainer.py \
+     --ps_hosts=172.31.6.117:2222\
+     --worker_hosts=172.31.15.67:2222\
+     --job_name=worker --task_index=0

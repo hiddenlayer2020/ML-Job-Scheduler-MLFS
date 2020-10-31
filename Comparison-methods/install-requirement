@@ -1,0 +1,15 @@
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install python-pip
+pip install -r requirements.txt
+sudo apt-get update
+sudo apt-get install -y libsm6 libxext6 libxrender-dev
+pip install opencv-python
+pip install scipy
+pip install torch
+#pip uninstall numpy
+#pip uninstall numpy
+#pip uninstall numpy
+#pip install numpy==1.16.2
+sudo apt-get install python-tk
+pip install psutil

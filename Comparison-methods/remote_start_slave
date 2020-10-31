@@ -1,0 +1,6 @@
+#!/bin/bash
+if(($#!=1))
+then
+echo 'usage: ./remote_start_slave ip'
+fi
+ssh -i ./tensorflow-zetian.pem ubuntu@$1 "/home/ubuntu/TF-scheduler/local_start_slave &" &

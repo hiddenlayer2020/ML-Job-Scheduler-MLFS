@@ -1,0 +1,3 @@
+#!/bin/bash
+
+python /home/ubuntu/TF-scheduler/server.py slave

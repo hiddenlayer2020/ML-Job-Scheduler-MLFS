@@ -1,0 +1,30 @@
+#!/bin/bash
+if(($#!=6))
+then
+echo 'usage: ./remote_task_executor ps_host_ip port worker_host_ip port job_name task_index'
+fi
+
+ps_host_ip=$1
+ps_host_port=$2
+ps_host=$1:$2
+
+worker_host_ip=$3
+worker_host_port=$4
+worker_host=$3:$4
+
+#echo 'ps host ip: '$ps_host_ip
+#echo 'ps host port: '$ps_host_port
+#echo 'ps host: '$ps_host
+
+#echo 'worker host ip: '$worker_host_ip
+#echo 'worker host port: '$worker_host_port
+#echo 'worker host: '$worker_host
+
+#python trainer.py --ps_hosts=($ps_host_ip):$(ps_host_port) --worker_hosts=$(worker_host_ip):$(worker_host_port) --job_name=ps --task_index=0 --train_folder=/home/ubuntu/TF-scheduler
+
+#python trainer.py --ps_hosts=($ps_host_ip):$(ps_host_port) --worker_hosts=$(worker_host_ip):$(worker_host_port) --job_name=worker --task_index=0 --train_folder=/home/ubuntu/TF-scheduler
+
+ssh -i ./tensorflow-zetian.pem ubuntu@$ps_host_ip "/home/ubuntu/TF-scheduler/local_task_executor $ps_host $worker_host ps $5 $6 &" &
+
+ssh -i ./tensorflow-zetian.pem ubuntu@$worker_host_ip "/home/ubuntu/TF-scheduler/local_task_executor $ps_host $worker_host worker $5 $6 &" &
+
