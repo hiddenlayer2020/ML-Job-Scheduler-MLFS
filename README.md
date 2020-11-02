@@ -1,4 +1,4 @@
-# Job Scheduling for Model-Parallelism Machine Learning Clusters
+# Job Scheduling for Large-Scale Machine Learning Clusters
 
 MLFS is a machine learning job feature based job scheduler for machine learning clusters running both data parallelism and model parallelism machine learning jobs.
 
