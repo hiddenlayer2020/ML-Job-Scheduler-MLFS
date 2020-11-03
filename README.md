@@ -1,6 +1,6 @@
 # Job Scheduling for Large-Scale Machine Learning Clusters
 
-MLFS is a machine learning job feature based job scheduler for machine learning clusters running both data parallelism and model parallelism machine learning jobs.
+MLFS is a machine learning job feature based job scheduler for machine learning clusters running both data parallelism and model parallelism machine learning jobs. The detail of the paper can be found in Conext-ClusterML-camera-ready-version.pdf
 
 ### Prerequisites
 - Install prerequisites (tested with Ubuntu 16.04, Tensorflow v1.8.0)
