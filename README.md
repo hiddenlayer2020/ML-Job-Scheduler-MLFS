@@ -2,7 +2,7 @@
 
 
 MLFS is a machine learning job feature based job scheduler for machine learning clusters running both data parallelism and model parallelism machine learning jobs. The corresponding research work is published in CoNEXT 2020. Please click [here](https://dl.acm.org/doi/pdf/10.1145/3386367.3432588) for the detail of the paper.
-
+ 
 ### Prerequisites
 - Install prerequisites (tested with Ubuntu 16.04, Tensorflow v1.8.0)
 ```
