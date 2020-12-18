@@ -1,4 +1,4 @@
-# [Job Scheduling for Large-Scale Machine Learning Clusters](https://dl.acm.org/doi/pdf/10.1145/3386367.3432588)
+# Job Scheduling for Large-Scale Machine Learning Clusters. [PDF](https://dl.acm.org/doi/pdf/10.1145/3386367.3432588)
 
 MLFS is a machine learning job feature based job scheduler for machine learning clusters running both data parallelism and model parallelism machine learning jobs. The detail of the paper can be found in Conext-ClusterML-camera-ready-version.pdf
 
@@ -33,6 +33,10 @@ python real-test.py
 ```
 
 The results will be saved to `test/results` folder.
+
+
+### ACKNOWLEDGEMENTS
+We thank the valuable suggestions from the anonymous reviewers and the shepherd. This research was supported in part by U.S. NSF grants, Microsoft Research Faculty Fellowship, and AWS Machine Learning Research Awards.
 
 
 
